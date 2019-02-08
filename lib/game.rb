@@ -27,6 +27,30 @@ class Game
   [6,4,2]
   ]
   
+<<<<<<< HEAD
+=======
+  def won?
+     WIN_COMBINATIONS.find do |win|
+        @board.cells[win[0]] == @board.cells[win[1]] &&
+        @board.cells[win[1]] == @board.cells[win[2]] &&
+        @board.taken?(win[0]+1)
+      end
+  end
+
+  def draw?
+    @board.full? && !won?
+  end
+  
+  def over?
+    won? || draw? || @board.full?
+  end
+  
+   def winner
+    if winning_combo = won?
+      @winner = @board.cells[winning_combo.first]
+    end
+  end
+>>>>>>> 150f6c24e2883c7d6f3eef1e8b8acf12b87fdd89
   
   def turn
     puts "Please enter 1-9:"
@@ -38,7 +62,12 @@ class Game
       puts "Turn: #{@board.turn_count+1}\n\n"
       @board.update(current_move, player)
       @board.display
+<<<<<<< HEAD
       puts " "
+=======
+      puts "#{player.token} moved #{current_move}"
+      puts "\n"
+>>>>>>> 150f6c24e2883c7d6f3eef1e8b8acf12b87fdd89
     end
   end
   
@@ -53,6 +82,7 @@ class Game
     end
   end
 
+<<<<<<< HEAD
   def won?
      WIN_COMBINATIONS.find do |win|
         @board.cells[win[0]] == @board.cells[win[1]] &&
@@ -75,6 +105,12 @@ class Game
     end
   end 
   
+=======
+  def call
+    
+  end
+  
+>>>>>>> 150f6c24e2883c7d6f3eef1e8b8acf12b87fdd89
 end
 
 
