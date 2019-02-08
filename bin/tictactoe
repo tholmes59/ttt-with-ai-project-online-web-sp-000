@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../config/environment'
-<<<<<<< HEAD
+
 require 'pry'
 
 input = ""
@@ -60,7 +60,7 @@ case input
     until game.won?
     game.play
     end
-=======
+
 
 puts "Welcome to Tic Tac Toe!"
 puts "How many players? 0, 1, or 2?"
@@ -89,7 +89,7 @@ until play_again.downcase == "n" || play_again.downcase == "no"
   game = Game.new
   until game.won?
     game.play
->>>>>>> 150f6c24e2883c7d6f3eef1e8b8acf12b87fdd89
+
   end
   end
 
